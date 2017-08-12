@@ -1,3 +1,16 @@
+import breeze.linalg.DenseMatrix
+import breeze.linalg.cholesky
+import breeze.linalg.Axis.{_0, _1}
+import breeze.linalg.DenseVector
+import breeze.linalg.*
+import breeze.stats.distributions.Gaussian
+import breeze.math._
+import breeze.numerics._
+import breeze.optimize._
+import breeze.math.Complex
+import breeze.optimize.ApproximateGradientFunction
+import breeze.optimize.StochasticDiffFunction
+
 object GaussianProcess {
   var L = new DenseMatrix[Double](0, 0)
   var Xtrain = new DenseMatrix[Double](0, 0)
